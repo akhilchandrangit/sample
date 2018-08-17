@@ -23,6 +23,7 @@ if (isset($_POST['reg_user'])) {
   if ($password_1 != $password_2) {
 	  array_push($errors, "The two passwords do not match");
   }
+  //captcha validation
   if ( $_POST['captcha'] != $_SESSION['rand_code']){
     array_push($errors, "Incorrect Captcha");
   }
